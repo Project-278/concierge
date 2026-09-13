@@ -42,7 +42,7 @@ export function validateEnquiry(
   if (data.message.length < 20 || data.message.length > 5000)
     return { error: "Please describe your enquiry in 20 to 5,000 characters." };
   if (input.consent !== true)
-    return { error: "Please acknowledge the privacy information to continue." };
+    return { error: "Please acknowledge the privacy information to continue.," };
   return { data: { ...data, consent: true } };
 }
 export function enquiryDraft(data: Enquiry) {
